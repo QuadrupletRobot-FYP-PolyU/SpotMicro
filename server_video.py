@@ -1,7 +1,7 @@
 import io
 import socket
 import struct
-from picamera import PiCamera
+# from picamera import PiCamera
 from threading import Thread
 import cv2
 # Camera setup
