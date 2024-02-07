@@ -16,7 +16,7 @@ def video_stream_server(video_path, port):
     server_socket = socket.socket()
     server_socket.bind(('172.20.10.10', port))
     server_socket.listen(0)
-
+    print("listening")
     # Accept a single connection
     connection = server_socket.accept()[0].makefile('wb')
     try:
