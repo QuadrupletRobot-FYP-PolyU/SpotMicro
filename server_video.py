@@ -35,7 +35,7 @@ def video_stream_server(video_path, port):
 
             # Convert JPEG to bytes
             jpeg_bytes = jpeg.tobytes()
-
+            print(jpeg_bytes)
             # Send the length of the JPEG data
             connection.write(struct.pack('<L', len(jpeg_bytes)))
             connection.flush()
