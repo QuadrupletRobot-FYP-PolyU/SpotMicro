@@ -14,7 +14,7 @@ def video_stream_server(video_path, port):
     video = cv2.VideoCapture(video_path)
 
     server_socket = socket.socket()
-    server_socket.bind(('0.0.0.0', port))
+    server_socket.bind(('172.20.10.10', port))
     server_socket.listen(0)
 
     # Accept a single connection
