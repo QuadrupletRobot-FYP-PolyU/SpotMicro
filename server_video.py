@@ -81,7 +81,7 @@ def camera_stream_server(camera_index, port):
 
 
 # Path to your MP4 file
-video_path = '/path/to/your/video.mp4'
+video_path = 'video.mp4'
 
 # Start two threads for the two video streams (simulating two cameras)
 Thread(target=video_stream_server, args=(
