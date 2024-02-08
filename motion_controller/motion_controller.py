@@ -138,10 +138,7 @@ class MotionController:
                 finally:
                     sys.exit(1)
 
-        self.servoDictionary = {0: self.lrShoulder, 1: self.lrLeg, 2: self.lrFeet, 3: self.rrShoulder, 4: self.rrLeg,
-                                5: self.rrFeet, 6: self.rfShoulder, 7: self.rfLeg, 8: self.rfFeet, 9: self.lfShoulder, 10: self.lfLeg, 11: self.lfFeet}
-
-    def exit_gracefully(self, signum, frame):
+    def exit_gracefully(self):
         try:
             self.pca9685_1.deinit()
         finally:
