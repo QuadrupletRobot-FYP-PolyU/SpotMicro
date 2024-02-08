@@ -20,22 +20,22 @@ class AbortController:
             signal.signal(signal.SIGINT, self.exit_gracefully)
             signal.signal(signal.SIGTERM, self.exit_gracefully)
 
-            #self.gpio_port = Config().get(Config.ABORT_CONTROLLER_GPIO_PORT)
+            # self.gpio_port = Config().get(Config.ABORT_CONTROLLER_GPIO_PORT)
 
-            #GPIO.setmode(GPIO.BCM)
-            #GPIO.setup(self.gpio_port, GPIO.OUT)
+            # GPIO.setmode(GPIO.BCM)
+            # GPIO.setup(self.gpio_port, GPIO.OUT)
 
             self._abort_queue = communication_queues[queues.ABORT_CONTROLLER]
             self._lcd_screen_queue = communication_queues[queues.LCD_SCREEN_CONTROLLER]
 
             self.abort()
 
-            #self._lcd_screen_queue.put(
+            # self._lcd_screen_queue.put(
             #    queues.LCD_SCREEN_SHOW_ABORT_CONTROLLER_OK_ON)
 
         except Exception as e:
             log.error('Abort controller initialization problem', e)
-            #self._lcd_screen_queue.put(
+            # self._lcd_screen_queue.put(
             #    queues.LCD_SCREEN_SHOW_ABORT_CONTROLLER_NOK)
             try:
                 self.abort()
@@ -67,11 +67,13 @@ class AbortController:
             sys.exit(1)
 
     def activate_servos(self):
-        #self._lcd_screen_queue.put(
+        x = 1
+        # self._lcd_screen_queue.put(
         #    queues.LCD_SCREEN_SHOW_ABORT_CONTROLLER_OK_ON)
-        #GPIO.output(self.gpio_port, GPIO.LOW)
+        # GPIO.output(self.gpio_port, GPIO.LOW)
 
     def abort(self):
-        #self._lcd_screen_queue.put(
+        x = 1
+        # self._lcd_screen_queue.put(
         #    queues.LCD_SCREEN_SHOW_ABORT_CONTROLLER_OK_OFF)
-        #GPIO.output(self.gpio_port, GPIO.HIGH)
+        # GPIO.output(self.gpio_port, GPIO.HIGH)
