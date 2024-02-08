@@ -555,29 +555,6 @@ class MotionController:
         except ValueError as e:
             log.error('Impossible servo_front_feet_right angle requested')
 
-    def standing(self):
-        variation_leg = 50
-        variation_feet = 70
-        time.sleep(1)
-
-        self.lrShoulder.angle = 85
-        self.lrLeg.angle = 90 - variation_leg - 10
-        self.lrFeet.angle = 0 + variation_feet
-
-        self.rrShoulder.angle = 95
-        self.rrLeg.angle = 90 + variation_leg + 10
-        self.rrFeet.angle = 180 - variation_feet
-
-        time.sleep(0.05)
-
-        self.lfShoulder.angle = 90
-        self.lfLeg.angle = 90 - variation_leg - 10
-        self.lfFeet.angle = 0 + variation_feet
-
-        self.rfShoulder.angle = 90
-        self.rfLeg.angle = 90 + variation_leg + 10
-        self.rfFeet.angle = 180 - variation_feet + 5
-
     def rest_position(self):
 
         self.servo_rear_shoulder_left_rest_angle = Config().get(
