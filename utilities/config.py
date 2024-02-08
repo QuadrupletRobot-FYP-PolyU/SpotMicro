@@ -21,7 +21,7 @@ class Singleton(type):
 
 class Config(metaclass=Singleton):
     REMOTE_CONTROLLER_CONTROLLER_DEVICE = 'remote_controller_controller[0].remote_controller[0].device'
-    CAMERA_ACTIVATED = False
+    CAMERA_ACTIVATED = 'False'
     MOTION_CONTROLLER_BOARDS_PCA9685_ADDRESS = 'motion_controller[*].boards[*].pca9685_1[*].address | [0] | [0] | [0]'
     MOTION_CONTROLLER_BOARDS_PCA9685_REFERENCE_CLOCK_SPEED = 'motion_controller[*].boards[*].pca9685_1[*].reference_clock_speed | [0] | [0] | [0]'
     MOTION_CONTROLLER_BOARDS_PCA9685_FREQUENCY = 'motion_controller[*].boards[*].pca9685_1[*].frequency | [0] | [0] | [0]'

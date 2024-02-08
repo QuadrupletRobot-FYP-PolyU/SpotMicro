@@ -93,7 +93,7 @@ class ServerVideo:
         # Path to your MP4 file
         video_path = 'video.mp4'
 
-        if Config().get(Config.CAMERA_ACTIVATED)():
+        if Config().get(Config.CAMERA_ACTIVATED)() == 'True':
             Thread(target=self.camera_stream_server, args=(
                 0, 6666)).start()  # Port for left eye
             Thread(target=self.camera_stream_server, args=(
