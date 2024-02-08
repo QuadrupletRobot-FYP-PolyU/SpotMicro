@@ -13,7 +13,7 @@ class ServerVideo:
     camera_resolution = (1280, 720)
     camera_framerate = 24
 
-    def __init__(communication_queues):
+    def __init__(self, communication_queues):
         self._abort_queue = communication_queues[queues.ABORT_CONTROLLER]
         self._motion_queue = communication_queues[queues.MOTION_CONTROLLER]
         self._lcd_screen_queue = communication_queues[queues.LCD_SCREEN_CONTROLLER]
