@@ -1,5 +1,6 @@
 import socket
 import json
+import utilities.queues as queues
 
 
 class ServerController:
@@ -9,6 +10,12 @@ class ServerController:
         self.udp_port = 7777
         # Create a UDP socket
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+        self._abort_queue = communication_queues[queues.ABORT_CONTROLLER]
+        self._motion_queue = communication_queues[queues.MOTION_CONTROLLER]
+        self._lcd_screen_queue = communication_queues[queues.LCD_SCREEN_CONTROLLER]
+        self._video_queue = communication_queues[queues.VIDEO_SERVER_CONTROLLER]
+        self._server_controller = communication_queues[queues.REMOTE_CONTROLLER_CONTROLLER]
 
     def do_process_events_from_queues(self):
         # Bind the socket to the IP and port

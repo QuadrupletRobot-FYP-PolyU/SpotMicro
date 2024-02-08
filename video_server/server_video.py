@@ -4,13 +4,21 @@ import struct
 # from picamera import PiCamera
 from threading import Thread
 import cv2
+
 from utilities.config import Config
-# Camera setup
+import utilities.queues as queues
 
 
 class ServerVideo:
     camera_resolution = (1280, 720)
     camera_framerate = 24
+
+    def __init__(communication_queues):
+        self._abort_queue = communication_queues[queues.ABORT_CONTROLLER]
+        self._motion_queue = communication_queues[queues.MOTION_CONTROLLER]
+        self._lcd_screen_queue = communication_queues[queues.LCD_SCREEN_CONTROLLER]
+        self._video_queue = communication_queues[queues.VIDEO_SERVER_CONTROLLER]
+        self._server_controller = communication_queues[queues.REMOTE_CONTROLLER_CONTROLLER]
 
     def video_stream_server(self, video_path, port):
         # Open video file
