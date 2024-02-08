@@ -15,7 +15,7 @@ def process_abort_controller(communication_queues):
 
 def process_video_controller(communication_queues):
     video = ServerVideo(communication_queues)
-    video.do_process_events_from_queue()
+    video.do_process_events_from_queues()
 
 
 def process_motion_controller(communication_queues):
