@@ -21,7 +21,7 @@ class ServerController:
         # Bind the socket to the IP and port
         self.sock.bind((self.udp_ip, self.udp_port))
         print(f"UDP server up and listening at {self.udp_ip}:{self.udp_port}")
-
+        self._motion_queue.put('a')
         try:
             while True:
                 data, addr = self.sock.recvfrom(
@@ -29,7 +29,7 @@ class ServerController:
 
                 message = data.decode('utf-8')
                 input_states = json.loads(message)
-
+                
                 print(f"Received message from {addr}: {input_states}")
 
         except KeyboardInterrupt:

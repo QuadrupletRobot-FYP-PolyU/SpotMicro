@@ -1,0 +1,274 @@
+2024-02-08 22:34:02,984 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:34:03,010 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller
+2024-02-08 22:34:03,029 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:36:22,486 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:36:26,840 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:36:26,860 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller
+2024-02-08 22:36:26,872 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:36:28,496 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:36:40,530 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:36:40,550 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:36:40,562 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:41:07,046 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:41:15,097 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:41:15,118 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:41:15,130 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:41:27,732 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:44:38,464 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:44:38,485 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:44:38,497 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:44:38,518 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:45:52,082 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:45:59,103 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:45:59,125 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:45:59,137 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:45:59,158 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:46:39,692 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:46:45,259 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:46:45,281 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:46:45,294 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:46:45,310 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:47:19,205 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:47:29,098 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:47:29,120 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:47:29,132 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:47:29,154 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:48:29,228 - SpotMicro Motion controller      - INFO - Inactivity lasted 60 seconds, shutting down the servos, press start to reactivate
+2024-02-08 22:49:08,711 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:49:15,891 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:49:15,913 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:49:15,925 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:49:15,947 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:50:16,031 - SpotMicro Motion controller      - INFO - Inactivity lasted 60 seconds, shutting down the servos, press start to reactivate
+2024-02-08 22:50:16,280 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:50:45,391 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:50:45,411 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:50:45,440 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:51:27,729 - SpotMicro Abort controller       - INFO - Terminated
+2024-02-08 22:51:27,729 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:51:32,850 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:51:32,884 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:51:32,927 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:52:28,681 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:52:28,681 - SpotMicro Abort controller       - INFO - Terminated
+2024-02-08 22:52:33,479 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:52:33,499 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:52:33,522 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:52:33,526 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:53:33,584 - SpotMicro Motion controller      - INFO - Inactivity lasted 60 seconds, shutting down the servos, press start to reactivate
+2024-02-08 22:53:52,519 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:53:52,519 - SpotMicro Abort controller       - INFO - Terminated
+2024-02-08 22:53:57,275 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:53:57,296 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:53:57,318 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:53:57,322 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:54:57,356 - SpotMicro Motion controller      - INFO - Inactivity lasted 60 seconds, shutting down the servos, press start to reactivate
+2024-02-08 22:55:57,416 - SpotMicro Motion controller      - INFO - Inactivity lasted 60 seconds, shutting down the servos, press start to reactivate
+2024-02-08 22:56:07,470 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:56:07,470 - SpotMicro Abort controller       - INFO - Terminated
+2024-02-08 22:56:12,708 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-08 22:56:12,730 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-08 22:56:12,753 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:56:12,757 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-08 22:56:26,343 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-08 22:56:26,344 - SpotMicro Abort controller       - INFO - Terminated
+2024-02-23 22:11:02,012 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 22:11:02,037 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-23 22:11:17,083 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x42
+2024-02-23 22:11:17,085 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 22:11:17,086 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 22:11:17,086 - SpotMicro Configuration          - INFO - CHANNEL: 2
+2024-02-23 22:11:17,088 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 22:11:17,089 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 22:11:17,089 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-23 22:14:45,714 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 22:14:45,725 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-23 22:18:10,920 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 22:18:10,931 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-23 22:25:15,397 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 22:25:15,408 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-23 22:42:09,240 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 22:42:09,254 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-23 22:44:43,230 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 22:44:43,240 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-23 23:00:00,545 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 23:00:00,556 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-23 23:32:26,267 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 23:32:26,283 - SpotMicro Configuration          - INFO - Detected configuration for the modules: abort_controller, lcd_screen_controller, remote_controller_controller, motion_controller
+2024-02-23 23:33:27,699 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 23:33:27,710 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:34:14,505 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 23:34:14,516 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:34:24,706 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:34:24,707 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:34:24,709 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:34:24,709 - SpotMicro Configuration          - INFO - CHANNEL: 8
+2024-02-23 23:34:24,710 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:34:24,711 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:34:24,712 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-23 23:41:10,102 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-23 23:41:10,151 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-23 23:41:10,189 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:41:10,197 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:43:00,293 - SpotMicro Abort controller       - INFO - Terminated
+2024-02-23 23:43:00,293 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-23 23:43:07,425 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-23 23:43:07,446 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-23 23:43:07,468 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:43:07,472 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:44:07,584 - SpotMicro Motion controller      - INFO - Inactivity lasted 60 seconds, shutting down the servos, press start to reactivate
+2024-02-23 23:44:30,385 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-23 23:44:30,385 - SpotMicro Abort controller       - INFO - Terminated
+2024-02-23 23:46:39,050 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-23 23:46:39,070 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-23 23:46:39,094 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:46:39,099 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:47:09,893 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-23 23:47:09,893 - SpotMicro Abort controller       - INFO - Terminated
+2024-02-23 23:47:11,562 - SpotMicro                        - INFO - SpotMicro starting...
+2024-02-23 23:47:11,582 - SpotMicro                        - INFO - Created the communication queues: video_controller, abort_controller, motion_controller, remote_controller, lcd_screen_controller
+2024-02-23 23:47:11,606 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:47:11,610 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:47:11,634 - SpotMicro Motion controller      - ERROR - Unknown problem while processing the queue of the motion controller
+2024-02-23 23:47:11,634 - SpotMicro Motion controller      - ERROR -  - Most likely a servo is not able to get to the assigned position
+2024-02-23 23:47:21,059 - SpotMicro Abort controller       - INFO - Terminated
+2024-02-23 23:47:21,059 - SpotMicro                        - INFO - Terminated due Control+C was pressed
+2024-02-23 23:47:41,140 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 23:47:41,150 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:47:42,898 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:47:42,899 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:47:42,899 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:47:42,900 - SpotMicro Configuration          - INFO - CHANNEL: 0
+2024-02-23 23:47:42,900 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:47:42,901 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:47:42,901 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-23 23:47:55,304 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-23 23:47:55,315 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-23 23:48:00,404 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:48:00,405 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:48:00,406 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:48:00,407 - SpotMicro Configuration          - INFO - CHANNEL: 1
+2024-02-23 23:48:00,408 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:48:00,409 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:48:00,410 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-23 23:48:06,676 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:48:06,677 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:48:06,678 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:48:06,679 - SpotMicro Configuration          - INFO - CHANNEL: 2
+2024-02-23 23:48:06,680 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:48:06,681 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:48:06,681 - SpotMicro Configuration          - INFO - REST_ANGLE: 0
+2024-02-23 23:48:11,719 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:48:11,722 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:48:11,722 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:48:11,723 - SpotMicro Configuration          - INFO - CHANNEL: 3
+2024-02-23 23:48:11,724 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:48:11,725 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:48:11,726 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-23 23:48:17,788 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:48:17,789 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:48:17,790 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:48:17,790 - SpotMicro Configuration          - INFO - CHANNEL: 4
+2024-02-23 23:48:17,791 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:48:17,793 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:48:17,793 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-23 23:48:22,522 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:48:22,522 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:48:22,523 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:48:22,524 - SpotMicro Configuration          - INFO - CHANNEL: 5
+2024-02-23 23:48:22,525 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:48:22,526 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:48:22,526 - SpotMicro Configuration          - INFO - REST_ANGLE: 180
+2024-02-23 23:48:32,464 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:48:32,465 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:48:32,466 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:48:32,466 - SpotMicro Configuration          - INFO - CHANNEL: 6
+2024-02-23 23:48:32,468 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:48:32,469 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:48:32,470 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-23 23:48:41,990 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:48:41,991 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:48:41,992 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:48:41,992 - SpotMicro Configuration          - INFO - CHANNEL: 7
+2024-02-23 23:48:41,994 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:48:41,995 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:48:41,995 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-23 23:48:50,251 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:48:50,252 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:48:50,253 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:48:50,254 - SpotMicro Configuration          - INFO - CHANNEL: 8
+2024-02-23 23:48:50,255 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:48:50,256 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:48:50,257 - SpotMicro Configuration          - INFO - REST_ANGLE: 0
+2024-02-23 23:48:59,032 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:48:59,033 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:48:59,034 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:48:59,035 - SpotMicro Configuration          - INFO - CHANNEL: 9
+2024-02-23 23:48:59,037 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:48:59,038 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:48:59,039 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-23 23:49:05,316 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:49:05,317 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:49:05,317 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:49:05,318 - SpotMicro Configuration          - INFO - CHANNEL: 10
+2024-02-23 23:49:05,319 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:49:05,320 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:49:05,321 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-23 23:49:12,123 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:49:12,124 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:49:12,125 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:49:12,125 - SpotMicro Configuration          - INFO - CHANNEL: 11
+2024-02-23 23:49:12,126 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:49:12,128 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:49:12,128 - SpotMicro Configuration          - INFO - REST_ANGLE: 180
+2024-02-23 23:50:09,403 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-23 23:50:09,403 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-23 23:50:09,404 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-23 23:50:09,405 - SpotMicro Configuration          - INFO - CHANNEL: 9
+2024-02-23 23:50:09,405 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-23 23:50:09,406 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-23 23:50:09,406 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-25 02:02:23,638 - SpotMicro CALIBRATE SERVOS       - INFO - Calibrate rest position...
+2024-02-25 02:02:23,662 - SpotMicro Configuration          - INFO - Detected configuration for the modules: motion_controller
+2024-02-25 02:02:30,996 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-25 02:02:30,998 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-25 02:02:30,999 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-25 02:02:31,000 - SpotMicro Configuration          - INFO - CHANNEL: 0
+2024-02-25 02:02:31,001 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-25 02:02:31,002 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-25 02:02:31,003 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-25 02:03:32,600 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-25 02:03:32,601 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-25 02:03:32,602 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-25 02:03:32,602 - SpotMicro Configuration          - INFO - CHANNEL: 3
+2024-02-25 02:03:32,603 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-25 02:03:32,604 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-25 02:03:32,605 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-25 02:04:12,202 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-25 02:04:12,203 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-25 02:04:12,203 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-25 02:04:12,204 - SpotMicro Configuration          - INFO - CHANNEL: 6
+2024-02-25 02:04:12,205 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-25 02:04:12,206 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-25 02:04:12,207 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-25 02:04:36,633 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-25 02:04:36,634 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-25 02:04:36,635 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-25 02:04:36,635 - SpotMicro Configuration          - INFO - CHANNEL: 9
+2024-02-25 02:04:36,637 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-25 02:04:36,638 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-25 02:04:36,639 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-25 02:05:32,165 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-25 02:05:32,166 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-25 02:05:32,166 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-25 02:05:32,167 - SpotMicro Configuration          - INFO - CHANNEL: 0
+2024-02-25 02:05:32,167 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-25 02:05:32,168 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-25 02:05:32,168 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
+2024-02-25 02:06:21,194 - SpotMicro Configuration          - INFO - PCA9685_ADDRESS: 0x40
+2024-02-25 02:06:21,195 - SpotMicro Configuration          - INFO - PCA9685_REFERENCE_CLOCK_SPEED: 25000000
+2024-02-25 02:06:21,196 - SpotMicro Configuration          - INFO - PCA9685_FREQUENCY: 50
+2024-02-25 02:06:21,196 - SpotMicro Configuration          - INFO - CHANNEL: 3
+2024-02-25 02:06:21,197 - SpotMicro Configuration          - INFO - MIN_PULSE: 500
+2024-02-25 02:06:21,197 - SpotMicro Configuration          - INFO - MAX_PULSE: 2500
+2024-02-25 02:06:21,198 - SpotMicro Configuration          - INFO - REST_ANGLE: 90
