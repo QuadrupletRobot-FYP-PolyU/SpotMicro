@@ -11,7 +11,7 @@ import utilities.queues as queues
 
 class ServerVideo:
     camera_resolution = (1920, 1080)
-    camera_framerate = 24
+    camera_framerate = 40
     # Maximum size for TCP packet, can be set to a higher number than UDP
     max_packet_size = 65536
 
