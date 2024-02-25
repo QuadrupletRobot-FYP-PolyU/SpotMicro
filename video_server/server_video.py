@@ -65,8 +65,7 @@ class ServerVideo:
         with PiCamera() as camera:
             camera.resolution = self.camera_resolution
             camera.framerate = self.camera_framerate
-
-            server_socket = socket.socket()
+            server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             server_socket.bind(('172.20.10.10', port))
             server_socket.listen(0)
 
