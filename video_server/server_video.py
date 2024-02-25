@@ -54,7 +54,8 @@ class ServerVideo:
 
                 # Send JPEG data
                 connection.write(jpeg_bytes)
-
+        except Exception:
+            print("Whoops, seems like there was an error")
         finally:
             connection.close()
             server_socket.close()
