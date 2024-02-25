@@ -23,14 +23,15 @@ class ServerVideo:
     def video_stream_server(self, video_path, port):
         # Open video file
         video = cv2.VideoCapture(video_path)
-
+        ip_address = '172.20.10.10'
         server_socket = socket.socket()
         server_socket.bind(('172.20.10.10', port))
         server_socket.listen(0)
-        print("listening")
+        print(f"Searching at {ip_address}:{port}")
         # Accept a single connection
         connection = server_socket.accept()[0].makefile('wb')
         try:
+            print(f"connection made {connection}")
             while True:
                 # Read video frame
                 ret, frame = video.read()
