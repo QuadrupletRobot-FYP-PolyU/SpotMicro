@@ -12,6 +12,7 @@ import utilities.queues as queues
 class ServerVideo:
     camera_resolution = (1280, 720)
     camera_framerate = 24
+    max_packet_size = 65507
 
     def __init__(self, communication_queues):
         self._abort_queue = communication_queues[queues.ABORT_CONTROLLER]
