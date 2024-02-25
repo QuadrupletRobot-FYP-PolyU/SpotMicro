@@ -34,7 +34,7 @@ class ServerVideo:
         video = cv2.VideoCapture('./video.mp4')
 
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_socket.bind(('', port))
+        server_socket.bind(('172.20.10.10', port))
         server_socket.listen(1)  # Listen for a single connection
 
         print(f"Server listening on port {port}")
