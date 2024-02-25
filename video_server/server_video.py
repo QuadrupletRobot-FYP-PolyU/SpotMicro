@@ -23,15 +23,16 @@ class ServerVideo:
     def video_stream_server(self, video_path, port):
         # Open video file
         video = cv2.VideoCapture('./video.mp4')
-        ip_address = '172.20.10.10'
-        server_socket = socket.socket()
-        server_socket.bind(('172.20.10.10', port))
-        server_socket.listen(0)
-        print(f"Searching at {ip_address}:{port}")
-        # Accept a single connection
-        connection = server_socket.accept()[0].makefile('wb')
+        server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        server_socket.bind(('', port))  # Listen on all interfaces
+
+        print(f"Server listening on port {port}")
+        # Wait for a client to send a message to get their address
+        print("Waiting for client...")
+        message, client_address = server_socket.recvfrom(1024)
+        print(f"Connection from {client_address}")
+
         try:
-            print(f"connection made {connection}")
             while True:
                 # Read video frame
                 ret, frame = video.read()
@@ -44,20 +45,19 @@ class ServerVideo:
                 ret, jpeg = cv2.imencode('.jpg', frame)
                 if not ret:
                     continue
-                print("I should be here!")
+
                 # Convert JPEG to bytes
                 jpeg_bytes = jpeg.tobytes()
-                print(jpeg_bytes)
+
                 # Send the length of the JPEG data
-                connection.write(struct.pack('<L', len(jpeg_bytes)))
-                connection.flush()
+                server_socket.sendto(struct.pack(
+                    '<L', len(jpeg_bytes)), client_address)
 
                 # Send JPEG data
-                connection.write(jpeg_bytes)
-        except Exception:
-            print("Whoops, seems like there was an error")
+                server_socket.sendto(jpeg_bytes, client_address)
+        except Exception as e:
+            print(f"An error occurred: {e}")
         finally:
-            connection.close()
             server_socket.close()
             video.release()
 
