@@ -4,7 +4,7 @@ import struct
 # from picamera import PiCamera
 from threading import Thread
 import cv2
-
+import sys
 from utilities.config import Config
 import utilities.queues as queues
 
@@ -22,7 +22,7 @@ class ServerVideo:
 
     def video_stream_server(self, video_path, port):
         # Open video file
-        video = cv2.VideoCapture(video_path)
+        video = cv2.VideoCapture('./video.mp4')
         ip_address = '172.20.10.10'
         server_socket = socket.socket()
         server_socket.bind(('172.20.10.10', port))
