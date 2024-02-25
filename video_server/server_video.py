@@ -64,6 +64,7 @@ class ServerVideo:
                     start = i * self.max_packet_size
                     end = start + self.max_packet_size
                     packet = jpeg_bytes[start:end]
+                    print(f"sending data to {client_address}: {packet}")
                     server_socket.sendto(packet, client_address)
         except Exception as e:
             print(f"An error occurred: {e}")
