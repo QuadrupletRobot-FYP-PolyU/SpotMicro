@@ -50,11 +50,18 @@ class ServerVideo:
                 jpeg_bytes = jpeg.tobytes()
 
                 # Send the length of the JPEG data
-                server_socket.sendto(struct.pack(
-                    '<L', len(jpeg_bytes)), client_address)
+                num_packets = len(jpeg_bytes) // self.max_packet_size + 1
 
-                # Send JPEG data
-                server_socket.sendto(jpeg_bytes, client_address)
+                # Send the number of packets to expect
+                server_socket.sendto(struct.pack(
+                    '<L', num_packets), client_address)
+
+                # Split data into packets and send each one
+                for i in range(num_packets):
+                    start = i * self.max_packet_size
+                    end = start + self.max_packet_size
+                    packet = jpeg_bytes[start:end]
+                    server_socket.sendto(packet, client_address)
         except Exception as e:
             print(f"An error occurred: {e}")
         finally:
