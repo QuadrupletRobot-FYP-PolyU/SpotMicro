@@ -25,6 +25,7 @@ class ServerVideo:
         # Open video file
         print(os.path.abspath(os.getcwd()))
         video = cv2.VideoCapture('./video.mp4')
+        print(video)
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         server_socket.bind(('', port))  # Listen on all interfaces
 
