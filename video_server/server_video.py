@@ -44,7 +44,7 @@ class ServerVideo:
                 ret, jpeg = cv2.imencode('.jpg', frame)
                 if not ret:
                     continue
-
+                print("I should be here!")
                 # Convert JPEG to bytes
                 jpeg_bytes = jpeg.tobytes()
                 print(jpeg_bytes)
