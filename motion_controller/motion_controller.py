@@ -414,7 +414,7 @@ class MotionController:
 
         if self.servo_rear_shoulder_left_pca9685 == 1:
             self.servo_rear_shoulder_left = servo.Servo(
-                self.pca9685_1.channels[self.servo_rear_shoulder_left_channel])
+                self.pca9685.channels[self.servo_rear_shoulder_left_channel])
         else:
             self.servo_rear_shoulder_left = servo.Servo(
                 self.pca9685_2.channels[self.servo_rear_shoulder_left_channel])
@@ -423,7 +423,7 @@ class MotionController:
 
         if self.servo_rear_leg_left_pca9685 == 1:
             self.servo_rear_leg_left = servo.Servo(
-                self.pca9685_1.channels[self.servo_rear_leg_left_channel])
+                self.pca9685.channels[self.servo_rear_leg_left_channel])
         else:
             self.servo_rear_leg_left = servo.Servo(
                 self.pca9685_2.channels[self.servo_rear_leg_left_channel])
@@ -432,7 +432,7 @@ class MotionController:
 
         if self.servo_rear_feet_left_pca9685 == 1:
             self.servo_rear_feet_left = servo.Servo(
-                self.pca9685_1.channels[self.servo_rear_feet_left_channel])
+                self.pca9685.channels[self.servo_rear_feet_left_channel])
         else:
             self.servo_rear_feet_left = servo.Servo(
                 self.pca9685_2.channels[self.servo_rear_feet_left_channel])
@@ -441,7 +441,7 @@ class MotionController:
 
         if self.servo_rear_shoulder_right_pca9685 == 1:
             self.servo_rear_shoulder_right = servo.Servo(
-                self.pca9685_1.channels[self.servo_rear_shoulder_right_channel])
+                self.pca9685.channels[self.servo_rear_shoulder_right_channel])
         else:
             self.servo_rear_shoulder_right = servo.Servo(
                 self.pca9685_2.channels[self.servo_rear_shoulder_right_channel])
@@ -450,7 +450,7 @@ class MotionController:
 
         if self.servo_rear_leg_right_pca9685 == 1:
             self.servo_rear_leg_right = servo.Servo(
-                self.pca9685_1.channels[self.servo_rear_leg_right_channel])
+                self.pca9685.channels[self.servo_rear_leg_right_channel])
         else:
             self.servo_rear_leg_right = servo.Servo(
                 self.pca9685_2.channels[self.servo_rear_leg_right_channel])
@@ -459,7 +459,7 @@ class MotionController:
 
         if self.servo_rear_feet_right_pca9685 == 1:
             self.servo_rear_feet_right = servo.Servo(
-                self.pca9685_1.channels[self.servo_rear_feet_right_channel])
+                self.pca9685.channels[self.servo_rear_feet_right_channel])
         else:
             self.servo_rear_feet_right = servo.Servo(
                 self.pca9685_2.channels[self.servo_rear_feet_right_channel])
@@ -468,7 +468,7 @@ class MotionController:
 
         if self.servo_front_shoulder_left_pca9685 == 1:
             self.servo_front_shoulder_left = servo.Servo(
-                self.pca9685_1.channels[self.servo_front_shoulder_left_channel])
+                self.pca9685.channels[self.servo_front_shoulder_left_channel])
         else:
             self.servo_front_shoulder_left = servo.Servo(
                 self.pca9685_2.channels[self.servo_front_shoulder_left_channel])
@@ -477,7 +477,7 @@ class MotionController:
 
         if self.servo_front_leg_left_pca9685 == 1:
             self.servo_front_leg_left = servo.Servo(
-                self.pca9685_1.channels[self.servo_front_leg_left_channel])
+                self.pca9685.channels[self.servo_front_leg_left_channel])
         else:
             self.servo_front_leg_left = servo.Servo(
                 self.pca9685_2.channels[self.servo_front_leg_left_channel])
@@ -486,7 +486,7 @@ class MotionController:
 
         if self.servo_front_feet_left_pca9685 == 1:
             self.servo_front_feet_left = servo.Servo(
-                self.pca9685_1.channels[self.servo_front_feet_left_channel])
+                self.pca9685.channels[self.servo_front_feet_left_channel])
         else:
             self.servo_front_feet_left = servo.Servo(
                 self.pca9685_2.channels[self.servo_front_feet_left_channel])
@@ -495,7 +495,7 @@ class MotionController:
 
         if self.servo_front_shoulder_right_pca9685 == 1:
             self.servo_front_shoulder_right = servo.Servo(
-                self.pca9685_1.channels[self.servo_front_shoulder_right_channel])
+                self.pca9685.channels[self.servo_front_shoulder_right_channel])
         else:
             self.servo_front_shoulder_right = servo.Servo(
                 self.pca9685_2.channels[self.servo_front_shoulder_right_channel])
@@ -504,7 +504,7 @@ class MotionController:
 
         if self.servo_front_leg_right_pca9685 == 1:
             self.servo_front_leg_right = servo.Servo(
-                self.pca9685_1.channels[self.servo_front_leg_right_channel])
+                self.pca9685.channels[self.servo_front_leg_right_channel])
         else:
             self.servo_front_leg_right = servo.Servo(
                 self.pca9685_2.channels[self.servo_front_leg_right_channel])
@@ -513,7 +513,7 @@ class MotionController:
 
         if self.servo_front_feet_right_pca9685 == 1:
             self.servo_front_feet_right = servo.Servo(
-                self.pca9685_1.channels[self.servo_front_feet_right_channel])
+                self.pca9685.channels[self.servo_front_feet_right_channel])
         else:
             self.servo_front_feet_right = servo.Servo(
                 self.pca9685_2.channels[self.servo_front_feet_right_channel])
