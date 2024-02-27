@@ -29,14 +29,19 @@ class ServerVideo:
         # Send the frame data
         connection.sendall(frame_data)
 
-    def video_stream_server(self, video_path, port):
-        # Open video file
-        video = cv2.VideoCapture('./video.mp4')
+    def video_stream_server(self, port, camera_index_left, camera_index_right):
+        camera_left = cv2.VideoCapture(camera_index_left)
+        camera_right = cv2.VideoCapture(camera_index_right)
+
+        camera_right.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
+        camera_left.set(cv2.CAP_PROP_FRAME_WIDTH, self.camera_resolution[0])
+        camera_left.set(cv2.CAP_PROP_FRAME_HEIGHT, self.camera_resolution[1])
+        camera_right.set(cv2.CAP_PROP_FRAME_WIDTH, self.camera_resolution[0])
+        camera_right.set(cv2.CAP_PROP_FRAME_HEIGHT, self.camera_resolution[1])
 
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server_socket.bind(('172.20.10.10', port))
-        server_socket.listen(1)  # Listen for a single connection
-
+        server_socket.listen(1)
         print(f"Server listening on port {port}")
         print("Waiting for client...")
         connection, client_address = server_socket.accept()
@@ -44,35 +49,36 @@ class ServerVideo:
 
         try:
             while True:
-                ret, frame = video.read()
-                if not ret:
-                    video.set(cv2.CAP_PROP_POS_FRAMES, 0)
-                    continue
+                ret_left, frame_left = camera_left.read()
+                ret_right, frame_right = camera_right.read()
 
-                ret, jpeg = cv2.imencode('.jpg', frame)
+                if not ret_left or not ret_right:
+                    print("Failed to grab frame")
+                    break
+
+                # Stitch the frames side by side
+                stitched_frame = np.hstack((frame_left, frame_right))
+
+                ret, jpeg = cv2.imencode('.jpg', stitched_frame)
                 if not ret:
+                    print("Failed to encode frame")
                     continue
 
                 jpeg_bytes = jpeg.tobytes()
-
                 self.send_frame(connection, jpeg_bytes)
+
         except Exception as e:
             print(f"An error occurred: {e}")
         finally:
             connection.close()
             server_socket.close()
-            video.release()
+            camera_left.release()
+            camera_right.release()
 
     # ... Include other methods here, adjusted for TCP ...
 
     def do_process_events_from_queues(self):
-        video_path = 'video.mp4'
-
-        if Config().get(Config.CAMERA_ACTIVATED) == 'True':
-            # Camera streaming logic (omitted, but should be similar to video_stream_server with TCP adjustments)
-            pass
-        else:
-            Thread(target=self.video_stream_server, args=(
-                video_path, 6666)).start()  # Port for left eye
-            Thread(target=self.video_stream_server, args=(
-                video_path, 6667)).start()  # Port for right eye
+        camera_index_left = 0
+        camera_index_right = 1
+        Thread(target=self.video_stream_server, args=(
+            6666, camera_index_left, camera_index_right)).start()  # Port for right eye
