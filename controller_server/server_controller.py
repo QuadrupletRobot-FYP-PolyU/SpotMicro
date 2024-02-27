@@ -37,6 +37,8 @@ class ServerController:
                     elif data == "Space" and input_states[data]:
                         self._motion_queue.put('y')
 
+                print(self._motion_queue)
+
         except KeyboardInterrupt:
             print("\nServer is shutting down.")
 
