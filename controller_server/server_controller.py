@@ -32,7 +32,7 @@ class ServerController:
 
                 print(f"Received message at {addr}")
                 for data in input_states:
-                    print(f"Data received {data}")
+                    print(f"{input_states[data]}")
 
         except KeyboardInterrupt:
             print("\nServer is shutting down.")
