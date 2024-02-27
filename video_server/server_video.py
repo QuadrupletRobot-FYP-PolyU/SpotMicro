@@ -3,6 +3,7 @@ import socket
 import struct
 from threading import Thread
 import cv2
+import numpy as np
 from utilities.config import Config
 import utilities.queues as queues
 
