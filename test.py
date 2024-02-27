@@ -3,7 +3,7 @@ import time
 
 # Initialize the two cameras
 cap0 = cv2.VideoCapture(0)
-cap1 = cv2.VideoCapture(1)
+cap1 = cv2.VideoCapture(2)
 
 if not cap0.isOpened() or not cap1.isOpened():
     print("Cannot open one or both cameras")
