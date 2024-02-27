@@ -1,29 +1,38 @@
 import cv2
 import time
 
-# The device number might be 0 or any other integer, depending on your system
-# If you have one camera, it is likely to be 0
-cap = cv2.VideoCapture(0)
+# Initialize the two cameras
+cap0 = cv2.VideoCapture(0)
+cap1 = cv2.VideoCapture(1)
 
-if not cap.isOpened():
-    print("Cannot open camera")
+if not cap0.isOpened() or not cap1.isOpened():
+    print("Cannot open one or both cameras")
     exit()
 
-# Set a filename
-filename = "captured_frame.jpg"
+# Set filenames for the captured images
+filename0 = "camera0_frame.jpg"
+filename1 = "camera1_frame.jpg"
 
 try:
-    # Capture a single frame
-    ret, frame = cap.read()
-    if ret:
-        # If the frame is captured correctly, save it
-        cv2.imwrite(filename, frame)
-        print(f"Image saved as {filename}")
+    # Capture a frame from the first camera
+    ret0, frame0 = cap0.read()
+    if ret0:
+        cv2.imwrite(filename0, frame0)
+        print(f"Image saved as {filename0}")
     else:
-        print("Can't receive frame (stream end?). Exiting ...")
+        print("Can't receive frame from camera 0 (stream end?). Exiting ...")
+
+    # Capture a frame from the second camera
+    ret1, frame1 = cap1.read()
+    if ret1:
+        cv2.imwrite(filename1, frame1)
+        print(f"Image saved as {filename1}")
+    else:
+        print("Can't receive frame from camera 1 (stream end?). Exiting ...")
 finally:
-    # When everything done, release the capture
-    cap.release()
+    # When everything is done, release the captures
+    cap0.release()
+    cap1.release()
 
 # Optional: If you want to set a delay between captures, use time.sleep
 # time.sleep(2)
