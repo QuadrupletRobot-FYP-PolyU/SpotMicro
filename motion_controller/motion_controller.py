@@ -212,6 +212,7 @@ class MotionController:
                     self.deactivate_pca9685_boards()
 
             except Exception as e:
+                print(e)
                 log.error(
                     'Unknown problem while processing the queue of the motion controller')
                 log.error(
