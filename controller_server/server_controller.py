@@ -32,7 +32,10 @@ class ServerController:
 
                 print(f"Received message at {addr}")
                 for data in input_states:
-                    print(f"{input_states[data]}")
+                    if data == "A" and input_states[data]:
+                        self._motion_queue.put('a')
+                    elif data == "Space" and input_states[data]:
+                        self._motion_queue.put('y')
 
         except KeyboardInterrupt:
             print("\nServer is shutting down.")
