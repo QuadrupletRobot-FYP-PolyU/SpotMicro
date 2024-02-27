@@ -262,6 +262,10 @@ class MotionController:
             Config.MOTION_CONTROLLER_SERVOS_REAR_SHOULDER_LEFT_MAX_PULSE)
         self.servo_rear_shoulder_left_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_SHOULDER_LEFT_REST_ANGLE)
+        
+        print(f"rl_shoulder_servo: {self.servo_rear_shoulder_left_pca9685}, channel: {self.servo_rear_shoulder_left_channel},
+               min_pulse: {self.servo_rear_shoulder_left_min_pulse},  max_pulse: {self.servo_rear_shoulder_left_max_pulse},
+               rest: {self.servo_rear_shoulder_left_rest_angle}")
 
         self.servo_rear_leg_left_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_LEG_LEFT_PCA9685)
@@ -274,6 +278,10 @@ class MotionController:
         self.servo_rear_leg_left_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_LEG_LEFT_REST_ANGLE)
 
+        print(f"rl_leg_servo: {self.servo_rear_leg_left_pca9685}, channel: {self.servo_rear_leg_left_channel},
+               min_pulse: {self.servo_rear_leg_left_min_pulse},  max_pulse: {self.servo_rear_leg_left_max_pulse},
+            rest: {self.servo_rear_leg_left_rest_angle}")
+
         self.servo_rear_feet_left_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_FEET_LEFT_PCA9685)
         self.servo_rear_feet_left_channel = Config().get(
@@ -284,6 +292,10 @@ class MotionController:
             Config.MOTION_CONTROLLER_SERVOS_REAR_FEET_LEFT_MAX_PULSE)
         self.servo_rear_feet_left_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_FEET_LEFT_REST_ANGLE)
+        
+        print(f"rl_feet_servo: {self.servo_rear_feet_left_pca9685}, channel: {self.servo_rear_feet_left_channel},
+               min_pulse: {self.servo_rear_feet_left_min_pulse},  max_pulse: {self.servo_rear_feet_left_max_pulse},
+            rest: {self.servo_rear_feet_left_rest_angle}")
 
         self.servo_rear_shoulder_right_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_SHOULDER_RIGHT_PCA9685)
@@ -294,7 +306,11 @@ class MotionController:
         self.servo_rear_shoulder_right_max_pulse = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_SHOULDER_RIGHT_MAX_PULSE)
         self.servo_rear_shoulder_right_rest_angle = Config().get(
+
             Config.MOTION_CONTROLLER_SERVOS_REAR_SHOULDER_RIGHT_REST_ANGLE)
+        print(f"rr_shoulder_servo: {self.servo_rear_shoulder_right_pca9685}, channel: {self.servo_rear_shoulder_right_channel},
+               min_pulse: {self.servo_rear_shoulder_right_min_pulse},  max_pulse: {self.servo_rear_shoulder_right_max_pulse},
+               rest: {self.servo_rear_shoulder_right_rest_angle}")
 
         self.servo_rear_leg_right_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_LEG_RIGHT_PCA9685)
@@ -306,6 +322,10 @@ class MotionController:
             Config.MOTION_CONTROLLER_SERVOS_REAR_LEG_RIGHT_MAX_PULSE)
         self.servo_rear_leg_right_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_LEG_RIGHT_REST_ANGLE)
+        
+        print(f"rr_leg_servo: {self.servo_rear_leg_right_pca9685}, channel: {self.servo_rear_leg_right_channel},
+               min_pulse: {self.servo_rear_leg_right_min_pulse},  max_pulse: {self.servo_rear_leg_right_max_pulse},
+            rest: {self.servo_rear_leg_right_rest_angle}")
 
         self.servo_rear_feet_right_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_FEET_RIGHT_PCA9685)
@@ -317,6 +337,10 @@ class MotionController:
             Config.MOTION_CONTROLLER_SERVOS_REAR_FEET_RIGHT_MAX_PULSE)
         self.servo_rear_feet_right_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_FEET_RIGHT_REST_ANGLE)
+        
+        print(f"rr_feet_servo: {self.servo_rear_feet_right_pca9685}, channel: {self.servo_rear_feet_right_channel},
+               min_pulse: {self.servo_rear_feet_right_min_pulse},  max_pulse: {self.servo_rear_feet_right_max_pulse},
+            rest: {self.servo_rear_feet_right_rest_angle}")
 
         self.servo_front_shoulder_left_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_SHOULDER_LEFT_PCA9685)
@@ -328,6 +352,9 @@ class MotionController:
             Config.MOTION_CONTROLLER_SERVOS_FRONT_SHOULDER_LEFT_MAX_PULSE)
         self.servo_front_shoulder_left_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_SHOULDER_LEFT_REST_ANGLE)
+        print(f"fl_shoulder_servo: {self.servo_front_shoulder_left_pca9685}, channel: {self.servo_front_shoulder_left_channel},
+               min_pulse: {self.servo_front_shoulder_left_min_pulse},  max_pulse: {self.servo_front_shoulder_left_max_pulse},
+               rest: {self.servo_front_shoulder_left_rest_angle}")
 
         self.servo_front_leg_left_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_LEG_LEFT_PCA9685)
@@ -339,6 +366,10 @@ class MotionController:
             Config.MOTION_CONTROLLER_SERVOS_FRONT_LEG_LEFT_MAX_PULSE)
         self.servo_front_leg_left_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_LEG_LEFT_REST_ANGLE)
+        
+        print(f"fl_leg_servo: {self.servo_front_leg_left_pca9685}, channel: {self.servo_front_leg_left_channel},
+               min_pulse: {self.servo_front_leg_left_min_pulse},  max_pulse: {self.servo_front_leg_left_max_pulse},
+            rest: {self.servo_front_leg_left_rest_angle}")
 
         self.servo_front_feet_left_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_FEET_LEFT_PCA9685)
@@ -350,6 +381,9 @@ class MotionController:
             Config.MOTION_CONTROLLER_SERVOS_FRONT_FEET_LEFT_MAX_PULSE)
         self.servo_front_feet_left_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_FEET_LEFT_REST_ANGLE)
+        print(f"fl_feet_servo: {self.servo_front_feet_left_pca9685}, channel: {self.servo_front_feet_left_channel},
+               min_pulse: {self.servo_front_feet_left_min_pulse},  max_pulse: {self.servo_front_feet_left_max_pulse},
+            rest: {self.servo_front_feet_left_rest_angle}")
 
         self.servo_front_shoulder_right_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_SHOULDER_RIGHT_PCA9685)
@@ -361,6 +395,10 @@ class MotionController:
             Config.MOTION_CONTROLLER_SERVOS_FRONT_SHOULDER_RIGHT_MAX_PULSE)
         self.servo_front_shoulder_right_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_SHOULDER_RIGHT_REST_ANGLE)
+        
+        print(f"fr_shoulder_servo: {self.servo_front_shoulder_right_pca9685}, channel: {self.servo_front_shoulder_right_channel},
+               min_pulse: {self.servo_front_shoulder_right_min_pulse},  max_pulse: {self.servo_front_shoulder_right_max_pulse},
+               rest: {self.servo_front_shoulder_right_rest_angle}")
 
         self.servo_front_leg_right_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_LEG_RIGHT_PCA9685)
@@ -372,6 +410,9 @@ class MotionController:
             Config.MOTION_CONTROLLER_SERVOS_FRONT_LEG_RIGHT_MAX_PULSE)
         self.servo_front_leg_right_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_LEG_RIGHT_REST_ANGLE)
+        print(f"fr_leg_servo: {self.servo_front_leg_right_pca9685}, channel: {self.servo_front_leg_right_channel},
+               min_pulse: {self.servo_front_leg_right_min_pulse},  max_pulse: {self.servo_front_leg_right_max_pulse},
+               rest: {self.servo_front_leg_right_rest_angle}")
 
         self.servo_front_feet_right_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_FEET_RIGHT_PCA9685)
@@ -383,6 +424,10 @@ class MotionController:
             Config.MOTION_CONTROLLER_SERVOS_FRONT_FEET_RIGHT_MAX_PULSE)
         self.servo_front_feet_right_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_FEET_RIGHT_REST_ANGLE)
+        
+        print(f"fr_feet_servo: {self.servo_front_feet_right_pca9685}, channel: {self.servo_front_feet_right_channel},
+               min_pulse: {self.servo_front_feet_right_min_pulse},  max_pulse: {self.servo_front_feet_right_max_pulse},
+               rest: {self.servo_front_feet_right_rest_angle}")
 
     def activate_servos(self):
 
