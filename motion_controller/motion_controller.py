@@ -156,7 +156,7 @@ class MotionController:
             try:
 
                 event = self._motion_queue.get(block=True, timeout=60)
-
+                print(event)
                 # log.debug(event)
 
                 if event['start']:
