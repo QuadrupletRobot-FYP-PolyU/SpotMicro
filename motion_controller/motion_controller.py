@@ -167,8 +167,6 @@ class MotionController:
                         self._abort_queue.put(
                             queues.ABORT_CONTROLLER_ACTION_ABORT)
                     else:
-                        self._abort_queue.put(
-                            queues.ABORT_CONTROLLER_ACTION_ACTIVATE)
                         self.activate_pca9685_boards()
                         self.activate_servos()
                         self.rest_position()
