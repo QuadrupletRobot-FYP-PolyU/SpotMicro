@@ -167,7 +167,6 @@ class MotionController:
                         self._abort_queue.put(
                             queues.ABORT_CONTROLLER_ACTION_ABORT)
                     else:
-                        print("in else statement")
                         self._abort_queue.put(
                             queues.ABORT_CONTROLLER_ACTION_ACTIVATE)
                         self.activate_pca9685_boards()
@@ -223,10 +222,13 @@ class MotionController:
     def load_pca9685_boards_configuration(self):
         self.pca9685_address = int(Config().get(
             Config.MOTION_CONTROLLER_BOARDS_PCA9685_1_ADDRESS), 0)
+
         self.pca9685_reference_clock_speed = int(Config().get(
             Config.MOTION_CONTROLLER_BOARDS_PCA9685_1_REFERENCE_CLOCK_SPEED))
         self.pca9685_frequency = int(Config().get(
             Config.MOTION_CONTROLLER_BOARDS_PCA9685_1_FREQUENCY))
+
+        print(f"address: {self.pca9685_address}, reference clock speed: {self.pca9685_reference_clock_speed}, frequency:{self.pca9685_frequency}")
 
     def activate_pca9685_boards(self):
 
