@@ -33,7 +33,7 @@ class ServerController:
                 print(f"Received message at {addr}")
                 for data in input_states:
                     if data == "A" and input_states[data]:
-                        self._motion_queue.put({'a': True})
+                        self._motion_queue.put({'start': True})
                     elif data == "Space" and input_states[data]:
                         self._motion_queue.put({'y': True})
 
