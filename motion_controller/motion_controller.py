@@ -117,7 +117,7 @@ class MotionController:
             self.i2c = busio.I2C(SCL, SDA)
             self.load_pca9685_boards_configuration()
             self.load_servos_configuration()
-
+            self.is_activated = False
             self._abort_queue = communication_queues[queues.ABORT_CONTROLLER]
             self._motion_queue = communication_queues[queues.MOTION_CONTROLLER]
             self._lcd_screen_queue = communication_queues[queues.LCD_SCREEN_CONTROLLER]
