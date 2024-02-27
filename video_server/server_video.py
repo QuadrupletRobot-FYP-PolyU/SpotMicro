@@ -1,10 +1,8 @@
 import io
 import socket
 import struct
-# from picamera import PiCamera
 from threading import Thread
 import cv2
-import os
 from utilities.config import Config
 import utilities.queues as queues
 
@@ -78,7 +76,7 @@ class ServerVideo:
     # ... Include other methods here, adjusted for TCP ...
 
     def do_process_events_from_queues(self):
-        camera_index_left = 0
-        camera_index_right = 1
+        camera_index_left = '/dev/video0'
+        camera_index_right = '/dev/video2'
         Thread(target=self.video_stream_server, args=(
             6666, camera_index_left, camera_index_right)).start()  # Port for right eye
