@@ -33,9 +33,9 @@ class ServerController:
                 print(f"Received message at {addr}")
                 for data in input_states:
                     if data == "A" and input_states[data]:
-                        self._motion_queue.put('a')
+                        self._motion_queue.put({'a': True})
                     elif data == "Space" and input_states[data]:
-                        self._motion_queue.put('y')
+                        self._motion_queue.put({'y': True})
 
                 print(self._motion_queue)
 
