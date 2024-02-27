@@ -30,7 +30,10 @@ class ServerController:
                 message = data.decode('utf-8')
                 input_states = json.loads(message)
 
-                print(f"Received message from {addr}: {input_states}")
+                print(f"Received message at {addr}")
+                for data in input_states:
+                    for att, value in data.items():
+                        print(f"Received message {att}:{value}")
 
         except KeyboardInterrupt:
             print("\nServer is shutting down.")
