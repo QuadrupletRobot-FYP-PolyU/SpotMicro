@@ -276,9 +276,7 @@ class MotionController:
         self.servo_rear_leg_left_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_LEG_LEFT_REST_ANGLE)
 
-        print(f"rl_leg_servo: {self.servo_rear_leg_left_pca9685}, channel: {self.servo_rear_leg_left_channel},
-               min_pulse: {self.servo_rear_leg_left_min_pulse},  max_pulse: {self.servo_rear_leg_left_max_pulse},
-            rest: {self.servo_rear_leg_left_rest_angle}")
+        print(f"rl_leg_servo: {self.servo_rear_leg_left_pca9685}, channel: {self.servo_rear_leg_left_channel}, min_pulse: {self.servo_rear_leg_left_min_pulse},  max_pulse: {self.servo_rear_leg_left_max_pulse},rest: {self.servo_rear_leg_left_rest_angle}")
 
         self.servo_rear_feet_left_pca9685 = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_REAR_FEET_LEFT_PCA9685)
