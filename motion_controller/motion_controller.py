@@ -6,6 +6,7 @@ from adafruit_motor import servo
 from adafruit_servokit import ServoKit
 import time
 import sys
+import traceback
 from utilities.general import General
 from utilities.log import Logger
 from utilities.config import Config
@@ -212,7 +213,11 @@ class MotionController:
                     self.deactivate_pca9685_boards()
 
             except Exception as e:
-                print(e)
+                traceback.print_exc()
+
+                # If you want to capture the traceback as a string, you can use traceback.format_exc()
+                exception_traceback = traceback.format_exc()
+                print(exception_traceback)
                 log.error(
                     'Unknown problem while processing the queue of the motion controller')
                 log.error(
