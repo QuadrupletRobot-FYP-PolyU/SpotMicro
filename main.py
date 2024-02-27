@@ -34,8 +34,8 @@ log = Logger().setup_logger()
 def create_controllers_queues():
     communication_queues = {'video_controller': multiprocessing.Queue(1),
                             'abort_controller': multiprocessing.Queue(10),
-                            'motion_controller': multiprocessing.Queue(1),
-                            'remote_controller': multiprocessing.Queue(1),
+                            'motion_controller': multiprocessing.Queue(10),
+                            'remote_controller': multiprocessing.Queue(10),
                             'lcd_screen_controller': multiprocessing.Queue(10)}
 
     log.info('Created the communication queues: ' +
