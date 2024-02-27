@@ -3,6 +3,7 @@ import cv2
 # Initialize the two cameras using their respective device files
 cap0 = cv2.VideoCapture('/dev/video0')
 cap1 = cv2.VideoCapture('/dev/video2', cv2.CAP_V4L)
+cap1.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
 
 if not cap0.isOpened():
     print("Cannot open camera 0")
