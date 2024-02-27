@@ -238,6 +238,7 @@ class MotionController:
         self.pca9685.frequency = self.pca9685_frequency
 
         self.is_activated = True
+        print(f"Activated: {self.is_activated}")
         log.debug(str(self.boards) + ' PCA9685 board(s) activated')
 
     def deactivate_pca9685_boards(self):
