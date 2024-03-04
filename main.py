@@ -4,6 +4,7 @@ import multiprocessing
 from motion_controller.motion_controller import MotionController
 from controller_server.server_controller import ServerController
 from abort_controller.abort_controller import AbortController
+from camera_controller.camera_controller import CameraController
 from video_server.server_video import ServerVideo
 from utilities.log import Logger
 
@@ -20,6 +21,10 @@ def process_video_controller(communication_queues):
 
 def process_motion_controller(communication_queues):
     motion = MotionController(communication_queues)
+    motion.do_process_events_from_queues()
+
+def process_camera_controller(communication_queues):
+    motion = CameraController(communication_queues)
     motion.do_process_events_from_queues()
 
 
@@ -77,11 +82,15 @@ def main():
                                                args=(communication_queues,))
     video_controller.daemon = True
 
+    camera_controller = multiprocessing.Process(target=process_camera_controller,
+                                               args=(communication_queues,))
+    camera_controller.daemon = True
     # Start the threads, queues messages are produced and consumed in those
     abort_controller.start()
     motion_controller.start()
     remote_controller_controller.start()
     video_controller.start()
+    camera_controller.start()
 
     if not abort_controller.is_alive():
         log.error("SpotMicro can't work without abort_controller")
@@ -103,6 +112,7 @@ def main():
     motion_controller.join()
     remote_controller_controller.join()
     video_controller.join()
+    camera_controller.join()
 
     close_controllers_queues(communication_queues)
 
