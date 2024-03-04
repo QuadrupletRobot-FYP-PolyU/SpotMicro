@@ -6,7 +6,7 @@ class CameraController:
     def __init__(self, communication_queues):
         # Set up the UDP server
         self.udp_ip = "172.20.10.10"
-        self.udp_port = 7777
+        self.udp_port = 8888
         # Create a UDP socket
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
