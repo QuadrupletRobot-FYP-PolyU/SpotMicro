@@ -20,9 +20,9 @@ class CameraController:
         self.udp_port = 8888
         # Create a UDP socket
         self.horizontalServo = self.pca9685.channels[15]
-        self.horizontalServo = 90
+        self.horizontalServo.angle = 90
         self.verticalServo = self.pca9685.channels[14]
-        self.verticalServo =90
+        self.verticalServo.angle =90
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
         self._abort_queue = communication_queues[queues.ABORT_CONTROLLER]
