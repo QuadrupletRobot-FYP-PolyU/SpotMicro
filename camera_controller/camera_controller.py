@@ -12,8 +12,8 @@ class CameraController:
         pca9685_address = 0x40
         pca9685_reference_clock_speed = 25000000
         pca9685_frequency = 50
-        self.pca9685 = PCA9685(self.i2c, address=self.pca9685_address,
-                               reference_clock_speed=self.pca9685_reference_clock_speed)
+        self.pca9685 = PCA9685(self.i2c, address=pca9685_address,
+                               reference_clock_speed=pca9685_reference_clock_speed)
         self.pca9685.frequency = pca9685_frequency
         # Set up the UDP server
         self.udp_ip = "172.20.10.10"
