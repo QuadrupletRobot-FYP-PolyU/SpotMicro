@@ -58,6 +58,6 @@ class CameraController:
         # Process the command and add it to the motion queue with the corresponding value
         # Assuming value is a float indicating the intensity or magnitude of the input
         if command == "horizontal":
-            self.horizontalServo = self.horizontalServo + (3*value)
+            self.horizontalServo.angle = self.horizontalServo + (3*value)
         elif command == "vertical":
-            self.verticalServo = self.verticalServo + (3*value)
+            self.verticalServo.angle = self.verticalServo + (3*value)
