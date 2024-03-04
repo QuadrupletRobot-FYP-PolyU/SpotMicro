@@ -59,8 +59,10 @@ class CameraController:
         # Process the command and add it to the motion queue with the corresponding value
         # Assuming value is a float indicating the intensity or magnitude of the input
         if command == "horizontal":
-            print(f"current angle {self.horizontalServo.angle} and supposed new one {self.horizontalServo.angle + (3*value)}")
-            self.horizontalServo.angle = self.horizontalServo.angle + (3*int(value))
+            if self.horizontalServo.angle > 0 and self.horizontalServo.angle < 180:
+                print(f"current angle {self.horizontalServo.angle} and supposed new one {self.horizontalServo.angle + (3*value)}")
+                self.horizontalServo.angle = self.horizontalServo.angle + (3*int(value))
         elif command == "vertical":
-            self.verticalServo.angle = self.verticalServo.angle + (3*int(value))
-            print(f"current angle {self.horizontalServo.angle} and supposed new one {self.horizontalServo.angle + (3*value)}")
+            if self.verticalServo.angle > 0 and self.verticalServo.angle < 180:
+                self.verticalServo.angle = self.verticalServo.angle + (3*int(value))
+                print(f"current angle {self.verticalServo.angle} and supposed new one {self.verticalServo.angle + (3*value)}")
