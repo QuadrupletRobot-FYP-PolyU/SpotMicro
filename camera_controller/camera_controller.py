@@ -3,6 +3,7 @@ import busio
 import busio
 from board import SCL, SDA
 import json
+from adafruit_motor import servo
 import utilities.queues as queues
 from adafruit_pca9685 import PCA9685
 
@@ -19,10 +20,10 @@ class CameraController:
         self.udp_ip = "172.20.10.10"
         self.udp_port = 8888
         # Create a UDP socket
-        self.horizontalServo = self.pca9685.channels[15]
+        self.horizontalServo = servo.Servo(self.pca9685.channels[15])
         self.horizontalServo.angle = 90
-        self.verticalServo = self.pca9685.channels[14]
-        self.verticalServo.angle =90
+        self.verticalServo = servo.Servo(self.pca9685.channels[14])
+        self.verticalServo.angle = 90
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
         self._abort_queue = communication_queues[queues.ABORT_CONTROLLER]
