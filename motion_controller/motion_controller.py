@@ -202,8 +202,6 @@ class MotionController:
                 if event['x']:
                     self.body_move_position_left()
 
-                self.move()
-
             except queue.Empty as e:
                 log.info('Inactivity lasted 60 seconds, shutting down the servos, '
                          'press start to reactivate')
@@ -713,7 +711,7 @@ class MotionController:
         self.servo_rear_leg_right.angle = self.servo_rear_leg_right_rest_angle + variation_leg
         self.servo_rear_feet_right.angle = self.servo_rear_feet_right_rest_angle - variation_feet
 
-        time.sleep(0.1)
+        time.sleep(0.05)
 
         self.servo_front_shoulder_left.angle = self.servo_front_shoulder_left_rest_angle - 10
         self.servo_front_leg_left.angle = self.servo_front_leg_left_rest_angle - variation_leg + 5
@@ -725,7 +723,7 @@ class MotionController:
         self.servo_front_feet_right.angle = self.servo_front_feet_right_rest_angle - \
             variation_feet + 5
 
-        time.sleep(0.1)
+        time.sleep(0.05)
 
     def body_move_position_right(self):
 

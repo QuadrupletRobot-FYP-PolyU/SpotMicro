@@ -32,12 +32,18 @@ class ServerController:
 
                 print(f"Received message at {addr}")
                 for data in input_states:
-                    if data == "A" and input_states[data]:
+                    if data == "Start" and input_states[data]:
                         self._motion_queue.put(
                             {'start': True, 'a': False, 'dPadVertical': False, 'dPadHorizontal': False, 'RightStickVertical': False, 'RightStickHorizontal': False, 'y': False, 'b': False, 'x': False})
                     elif data == "Space" and input_states[data]:
                         self._motion_queue.put({'start': False, 'a': False, 'dPadVertical': False, 'dPadHorizontal': False,
                                                'RightStickVertical': False, 'RightStickHorizontal': False, 'y': True, 'b': False, 'x': False})
+                    elif data == "Rest" and input_states[data]:
+                        self._motion_queue.put({'start': False, 'a': True, 'dPadVertical': False, 'dPadHorizontal': False,
+                                               'RightStickVertical': False, 'RightStickHorizontal': False, 'y': False, 'b': False, 'x': False})
+                    elif data == "Walk" and input_states[data]:
+                        self._motion_queue.put({'start': False, 'a': False, 'dPadVertical': False, 'dPadHorizontal': False,
+                                               'RightStickVertical': False, 'RightStickHorizontal': False, 'y': False, 'b': False, 'x': True})
 
                 print(self._motion_queue)
 
