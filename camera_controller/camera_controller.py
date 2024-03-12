@@ -7,6 +7,7 @@ from adafruit_motor import servo
 import utilities.queues as queues
 from adafruit_pca9685 import PCA9685
 
+
 class CameraController:
     def __init__(self, communication_queues):
         self.i2c = busio.I2C(SCL, SDA)
@@ -39,14 +40,15 @@ class CameraController:
 
         try:
             while True:
-                data, addr = self.sock.recvfrom(1024)  # Buffer size is 1024 bytes
+                data, addr = self.sock.recvfrom(
+                    1024)  # Buffer size is 1024 bytes
                 message = data.decode('utf-8')
                 input_states = json.loads(message)
 
-                print(f"Received message at {addr}: {input_states}")
+                # print(f"Received message at {addr}: {input_states}")
                 # Process the input states and put them into the appropriate queues
                 for command, value in input_states.items():
-                    print(f"Message, {command} with value {value}")
+                 #   print(f"Message, {command} with value {value}")
                     self.process_command(command, value)
 
         except KeyboardInterrupt:
@@ -56,16 +58,33 @@ class CameraController:
             print("Server has been closed.")
 
     def process_command(self, command, value):
+        x = 10
         # Process the command and add it to the motion queue with the corresponding value
         # Assuming value is a float indicating the intensity or magnitude of the input
-        if command == "horizontal":
-            newAngle = self.horizontalServo.angle + (3*int(value))
-            if newAngle > 0 and newAngle < 180:
-                print(f"current angle {self.horizontalServo.angle} and supposed new one {self.horizontalServo.angle + (3*value)}")
-                self.horizontalServo.angle = newAngle
-        elif command == "vertical":
-            newAngle=self.verticalServo.angle + (3*int(value))
-            if newAngle > 0 and newAngle < 180:
+        # if command == "horizontal":
+        # Calculate potential new angle based on current angle and value
+        # newAngle = self.horizontalServo.angle + (3 * int(value))
+        # Clamp the new angle to the servo's safe operating range
+        # newAngle = max(0, min(180, newAngle))
 
-                print(f"current angle {self.verticalServo.angle} and supposed new one {self.verticalServo.angle + (3*value)}")
-                self.verticalServo.angle = newAngle
+        # Set the servo to the new angle if it's within the valid range
+        # if 0 <= newAngle <= 180:
+        # print(
+        # f"Setting horizontal servo from angle {self.horizontalServo.angle} to {newAngle}")
+        # self.horizontalServo.angle = newAngle
+        # else:
+        # print(f"Horizontal servo command out of range: {newAngle}")
+
+        # elif command == "vertical":
+        # Calculate potential new angle based on current angle and value
+        # newAngle = self.verticalServo.angle + (3 * int(value))
+        # Clamp the new angle to the servo's safe operating range
+        # newAngle = max(0, min(180, newAngle))
+
+        # Set the servo to the new angle if it's within the valid range
+        # if 0 <= newAngle <= 180:
+        # print(
+        #       f"Setting vertical servo from angle {self.verticalServo.angle} to {newAngle}")
+        # self.verticalServo.angle = newAngle
+        # else:
+        # print(f"Vertical servo command out of range: {newAngle}")
