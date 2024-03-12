@@ -725,6 +725,8 @@ class MotionController:
         self.servo_front_feet_right.angle = self.servo_front_feet_right_rest_angle - \
             variation_feet + 5
 
+        time.sleep(0.5)
+
     def body_move_position_right(self):
 
         move = 20
