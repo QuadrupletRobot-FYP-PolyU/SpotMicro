@@ -43,7 +43,7 @@ class ServerController:
                                                'RightStickVertical': False, 'RightStickHorizontal': False, 'y': False, 'b': False, 'x': False})
                     elif data == "Walk" and input_states[data]:
                         self._motion_queue.put({'start': False, 'a': False, 'dPadVertical': False, 'dPadHorizontal': False,
-                                               'RightStickVertical': False, 'RightStickHorizontal': True, 'y': False, 'b': False, 'x': False})
+                                               'RightStickVertical': False, 'RightStickHorizontal': False, 'y': False, 'b': True, 'x': False})
 
                 print(self._motion_queue)
 
