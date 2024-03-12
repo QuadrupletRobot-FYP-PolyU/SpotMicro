@@ -208,6 +208,38 @@ class MotionController:
                 log.error(
                     ' - Most likely a servo is not able to get to the assigned position')
 
+    def walk_forward(self, steps, distance, body_length, body_width, l1, l2, l3):
+
+        # Define the height of the step and the leg lifting sequence
+        step_height = 0.3
+        sequence = ['RearRight', 'FrontLeft', 'RearLeft', 'FrontRight']
+
+        for _ in range(steps):
+            for leg_name in sequence:
+                # Lift the leg
+                x_lift, y_lift, z_lift = 0, 0, step_height
+                theta1, theta2, theta3 = ikine(x_lift, y_lift, z_lift, l1, l2, l3, leg_name in [
+                                               'FrontLeft', 'FrontRight'])
+
+                # Update the leg joint angles to lift the leg
+                self.move_leg(leg_name, theta1, theta2, theta3)
+
+                # Move the leg forward
+                x_forward, y_forward, z_forward = distance, 0, step_height
+                theta1, theta2, theta3 = ikine(
+                    x_forward, y_forward, z_forward, l1, l2, l3, leg_name in ['rightback', 'leftfront'])
+
+                # Update the leg joint angles to position the leg forward
+                self.move_leg(leg_name, theta1, theta2, theta3)
+
+                # Lower the leg
+                x_down, y_down, z_down = distance, 0, 0
+                theta1, theta2, theta3 = ikine(x_down, y_down, z_down, l1, l2, l3, leg_name in [
+                                               'rightback', 'leftfront'])
+
+                # Update the leg joint angles to lower the leg
+                self.move_leg(leg_name, theta1, theta2, theta3)
+
     def load_pca9685_boards_configuration(self):
         self.pca9685_address = int(Config().get(
             Config.MOTION_CONTROLLER_BOARDS_PCA9685_1_ADDRESS), 0)
@@ -665,35 +697,3 @@ class MotionController:
             self.servo_rear_shoulder_right.angle = 180 - theta0
             self.servo_rear_leg_right.angle = 180 - theta1
             self.servo_rear_feet_right.angle = 180 - theta2
-
-    def walk_forward(self, steps, distance, body_length, body_width, l1, l2, l3):
-
-        # Define the height of the step and the leg lifting sequence
-        step_height = 0.1
-        sequence = ['RearRight', 'FrontLeft', 'RearLeft', 'FrontRight']
-
-        for _ in range(steps):
-            for leg_name in sequence:
-                # Lift the leg
-                x_lift, y_lift, z_lift = 0, 0, step_height
-                theta1, theta2, theta3 = ikine(x_lift, y_lift, z_lift, l1, l2, l3, leg_name in [
-                                               'FrontLeft', 'FrontRight'])
-
-                # Update the leg joint angles to lift the leg
-                self.move_leg(leg_name, theta1, theta2, theta3)
-
-                # Move the leg forward
-                x_forward, y_forward, z_forward = distance, 0, step_height
-                theta1, theta2, theta3 = ikine(
-                    x_forward, y_forward, z_forward, l1, l2, l3, leg_name in ['rightback', 'leftfront'])
-
-                # Update the leg joint angles to position the leg forward
-                self.move_leg(leg_name, theta1, theta2, theta3)
-
-                # Lower the leg
-                x_down, y_down, z_down = distance, 0, 0
-                theta1, theta2, theta3 = ikine(x_down, y_down, z_down, l1, l2, l3, leg_name in [
-                                               'rightback', 'leftfront'])
-
-                # Update the leg joint angles to lower the leg
-                self.move_leg(leg_name, theta1, theta2, theta3)
