@@ -677,10 +677,10 @@ class MotionController:
 
         # if raw_value < 0:
         if True:
-            self.servo_rear_shoulder_left_rest_angle -= range
-            self.servo_rear_shoulder_right_rest_angle -= range
-            self.servo_front_shoulder_left_rest_angle += range
-            self.servo_front_shoulder_right_rest_angle += range
+            self.servo_rear_leg_left_rest_angle -= range
+            self.servo_rear_leg_right_rest_angle -= range
+            self.servo_front_leg_left_rest_angle += range
+            self.servo_front_leg_right_rest_angle += range
 
         # elif raw_value > 0:
         elif False:
