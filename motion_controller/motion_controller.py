@@ -11,6 +11,7 @@ from utilities.general import General
 from utilities.log import Logger
 from utilities.config import Config
 import utilities.queues as queues
+from kinematics.kinematics import ikine
 
 
 log = Logger().setup_logger('Motion controller')
@@ -179,29 +180,13 @@ class MotionController:
                 if event['a']:
                     self.rest_position()
 
-                if event['dPadVertical']:
-                    self.body_move_body_up_and_down(event['dPadVertical'])
-
-                if event['dPadHorizontal']:
-                    # self.body_move_body_left_right(event['dPadHorizontal'])
-                    self.body_move_body_left_right()
-
-                if event['RightStickVertical']:
-                    self.body_move_body_up_and_down_analog(
-                        event['RightStickVertical'])
-
-                if event['RightStickHorizontal']:
-                    self.body_move_body_left_right_analog(
-                        event['RightStickHorizontal'])
-
                 if event['y']:
                     self.standing_position()
 
                 if event['b']:
-                    self.body_move_position_right()
+                    self.walk_forward(1, 0.1, 0.186, 0.078,
+                                      0.055, 0.1075, 0.130)
 
-                if event['x']:
-                    self.body_move_position_left()
                 time.sleep(2)
                 self.move()
             except queue.Empty as e:
@@ -609,99 +594,6 @@ class MotionController:
         self.servo_front_feet_right_rest_angle = Config().get(
             Config.MOTION_CONTROLLER_SERVOS_FRONT_FEET_RIGHT_REST_ANGLE)
 
-    def body_move_body_up_and_down(self, raw_value):
-
-        range = 10
-        range2 = 15
-
-        if raw_value < 0:
-            self.servo_rear_leg_left_rest_angle -= range
-            self.servo_rear_feet_left_rest_angle += range2
-            self.servo_rear_leg_right_rest_angle += range
-            self.servo_rear_feet_right_rest_angle -= range2
-            self.servo_front_leg_left_rest_angle -= range
-            self.servo_front_feet_left_rest_angle += range2
-            self.servo_front_leg_right_rest_angle += range
-            self.servo_front_feet_right_rest_angle -= range2
-
-        elif raw_value > 0:
-            self.servo_rear_leg_left_rest_angle += range
-            self.servo_rear_feet_left_rest_angle -= range2
-            self.servo_rear_leg_right_rest_angle -= range
-            self.servo_rear_feet_right_rest_angle += range2
-            self.servo_front_leg_left_rest_angle += range
-            self.servo_front_feet_left_rest_angle -= range2
-            self.servo_front_leg_right_rest_angle -= range
-            self.servo_front_feet_right_rest_angle += range2
-
-    def body_move_body_up_and_down_analog(self, raw_value):
-
-        servo_rear_leg_left_max_angle = 38
-        servo_rear_feet_left_max_angle = 70
-        servo_rear_leg_right_max_angle = 126
-        servo_rear_feet_right_max_angle = 102
-        servo_front_leg_left_max_angle = 57
-        servo_front_feet_left_max_angle = 85
-        servo_front_leg_right_max_angle = 130
-        servo_front_feet_right_max_angle = 120
-
-        delta_rear_leg_left = int(General().maprange(
-            (1, -1), (Config().get(Config.MOTION_CONTROLLER_SERVOS_REAR_LEG_LEFT_REST_ANGLE), servo_rear_leg_left_max_angle), raw_value))
-        delta_rear_feet_left = int(General().maprange(
-            (1, -1), (Config().get(Config.MOTION_CONTROLLER_SERVOS_REAR_FEET_LEFT_REST_ANGLE), servo_rear_feet_left_max_angle), raw_value))
-        delta_rear_leg_right = int(General().maprange(
-            (1, -1), (Config().get(Config.MOTION_CONTROLLER_SERVOS_REAR_LEG_RIGHT_REST_ANGLE), servo_rear_leg_right_max_angle), raw_value))
-        delta_rear_feet_right = int(General().maprange(
-            (1, -1), (Config().get(Config.MOTION_CONTROLLER_SERVOS_REAR_FEET_RIGHT_REST_ANGLE), servo_rear_feet_right_max_angle), raw_value))
-        delta_front_leg_left = int(General().maprange(
-            (1, -1), (Config().get(Config.MOTION_CONTROLLER_SERVOS_FRONT_LEG_LEFT_REST_ANGLE), servo_front_leg_left_max_angle), raw_value))
-        delta_front_feet_left = int(General().maprange(
-            (1, -1), (Config().get(Config.MOTION_CONTROLLER_SERVOS_FRONT_FEET_LEFT_REST_ANGLE), servo_front_feet_left_max_angle), raw_value))
-        delta_front_leg_right = int(General().maprange(
-            (1, -1), (Config().get(Config.MOTION_CONTROLLER_SERVOS_FRONT_LEG_RIGHT_REST_ANGLE), servo_front_leg_right_max_angle), raw_value))
-        delta_front_feet_right = int(General().maprange(
-            (1, -1), (Config().get(Config.MOTION_CONTROLLER_SERVOS_FRONT_FEET_RIGHT_REST_ANGLE), servo_front_feet_right_max_angle), raw_value))
-
-        self.servo_rear_leg_left_rest_angle = delta_rear_leg_left
-        self.servo_rear_feet_left_rest_angle = delta_rear_feet_left
-        self.servo_rear_leg_right_rest_angle = delta_rear_leg_right
-        self.servo_rear_feet_right_rest_angle = delta_rear_feet_right
-        self.servo_front_leg_left_rest_angle = delta_front_leg_left
-        self.servo_front_feet_left_rest_angle = delta_front_feet_left
-        self.servo_front_leg_right_rest_angle = delta_front_leg_right
-        self.servo_front_feet_right_rest_angle = delta_front_feet_right
-
-    def body_move_body_left_right(self, raw_value):
-
-        range = 5
-
-        # if raw_value < 0:
-        if True:
-            self.servo_rear_leg_left_rest_angle -= range
-            self.servo_rear_leg_right_rest_angle -= range
-            self.servo_front_leg_left_rest_angle += range
-            self.servo_front_leg_right_rest_angle += range
-
-        # elif raw_value > 0:
-        elif False:
-            self.servo_rear_shoulder_left_rest_angle += range
-            self.servo_rear_shoulder_right_rest_angle += range
-            self.servo_front_shoulder_left_rest_angle -= range
-            self.servo_front_shoulder_right_rest_angle -= range
-
-        else:
-            self.rest_position()
-
-    def body_move_body_left_right_analog(self, raw_value):
-
-        delta_a = int(General().maprange((-1, 1), (30, 150), raw_value))
-        delta_b = int(General().maprange((-1, 1), (150, 30), raw_value))
-
-        self.servo_rear_shoulder_left_rest_angle = delta_a
-        self.servo_rear_shoulder_right_rest_angle = delta_a
-        self.servo_front_shoulder_left_rest_angle = delta_b
-        self.servo_front_shoulder_right_rest_angle = delta_b
-
     def standing_position(self):
 
         variation_leg = 50
@@ -756,33 +648,65 @@ class MotionController:
         self.servo_front_feet_right.angle = self.servo_front_feet_right_rest_angle - \
             variation_feet + 5
 
-    def body_move_position_left(self):
+    def move_leg(self, leg, theta0, theta1, theta2):
+        if leg == "FrontLeft":
+            self.servo_front_shoulder_left.angle = theta0
+            self.servo_front_leg_left.angle = theta1
+            self.servo_front_feet_left.angle = theta2
+        elif leg == "FrontRight":
+            self.servo_front_shoulder_right.angle = 180 - theta0
+            self.servo_front_leg_right.angle = 180 - theta1
+            self.servo_front_feet_right.angle = 180 - theta2
+        elif leg == "RearLeft":
+            self.servo_rear_shoulder_left.angle = theta0
+            self.servo_rear_leg_left.angle = theta1
+            self.servo_rear_feet_left.angle = theta2
+        elif leg == "RearRight":
+            self.servo_rear_shoulder_right.angle = 180 - theta0
+            self.servo_rear_leg_right.angle = 180 - theta1
+            self.servo_rear_feet_right.angle = 180 - theta2
 
-        move = 20
+    def walk_forward(self, steps, distance, body_length, body_width, l1, l2, l3):
+        '''
+        Moves the robot forward by a specified number of steps and distance.
 
-        variation_leg = 50
-        variation_feet = 70
+        Args:
+            robot: The quadruped robot object (assumed to have methods to move joints).
+            steps: Number of steps to take.
+            distance: Distance to move forward in each step.
+            body_length: Length of the robot's body.
+            body_width: Width of the robot's body.
+            l1: Length of the first link of the legs.
+            l2: Length of the second link of the legs.
+            l3: Length of the third link of the legs.
+        '''
 
-        self.servo_rear_shoulder_left.angle = self.servo_rear_shoulder_left_rest_angle + 10 - move
-        self.servo_rear_leg_left.angle = self.servo_rear_leg_left_rest_angle - variation_leg
-        self.servo_rear_feet_left.angle = self.servo_rear_feet_left_rest_angle + variation_feet
+        # Define the height of the step and the leg lifting sequence
+        step_height = 0.1
+        sequence = ['RearRight', 'FrontLeft', 'RearLeft', 'FrontRight']
 
-        self.servo_rear_shoulder_right.angle = self.servo_rear_shoulder_right_rest_angle - 10 - move
-        self.servo_rear_leg_right.angle = self.servo_rear_leg_right_rest_angle + variation_leg
-        self.servo_rear_feet_right.angle = self.servo_rear_feet_right_rest_angle - variation_feet
+        for _ in range(steps):
+            for leg_name in sequence:
+                # Lift the leg
+                x_lift, y_lift, z_lift = 0, 0, step_height
+                theta1, theta2, theta3 = ikine(x_lift, y_lift, z_lift, l1, l2, l3, leg_name in [
+                                               'rightback', 'leftfront'])
 
-        time.sleep(0.05)
+                # Update the leg joint angles to lift the leg
+                self.move_leg(leg_name, theta1, theta2, theta3)
 
-        self.servo_front_shoulder_left.angle = self.servo_front_shoulder_left_rest_angle - 10 + move
-        self.servo_front_leg_left.angle = self.servo_front_leg_left_rest_angle - variation_leg + 5
-        self.servo_front_feet_left.angle = self.servo_front_feet_left_rest_angle + \
-            variation_feet - 5
+                # Move the leg forward
+                x_forward, y_forward, z_forward = distance, 0, step_height
+                theta1, theta2, theta3 = ikine(
+                    x_forward, y_forward, z_forward, l1, l2, l3, leg_name in ['rightback', 'leftfront'])
 
-        self.servo_front_shoulder_right.angle = self.servo_front_shoulder_right_rest_angle + 10 + move
-        self.servo_front_leg_right.angle = self.servo_front_leg_right_rest_angle + variation_leg - 5
-        self.servo_front_feet_right.angle = self.servo_front_feet_right_rest_angle - \
-            variation_feet + 5
+                # Update the leg joint angles to position the leg forward
+                self.move_leg(leg_name, theta1, theta2, theta3)
 
-    def calibrate_angle(self, servo, angle):
-        servo.angle = angle
-        print(f"calibrated to angle {angle}")
+                # Lower the leg
+                x_down, y_down, z_down = distance, 0, 0
+                theta1, theta2, theta3 = ikine(x_down, y_down, z_down, l1, l2, l3, leg_name in [
+                                               'rightback', 'leftfront'])
+
+                # Update the leg joint angles to lower the leg
+                self.move_leg(leg_name, theta1, theta2, theta3)
