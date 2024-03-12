@@ -183,7 +183,8 @@ class MotionController:
                     self.body_move_body_up_and_down(event['dPadVertical'])
 
                 if event['dPadHorizontal']:
-                    self.body_move_body_left_right(event['dPadHorizontal'])
+                    # self.body_move_body_left_right(event['dPadHorizontal'])
+                    self.body_move_body_left_right()
 
                 if event['RightStickVertical']:
                     self.body_move_body_up_and_down_analog(
@@ -674,13 +675,15 @@ class MotionController:
 
         range = 5
 
-        if raw_value < 0:
+        # if raw_value < 0:
+        if True:
             self.servo_rear_shoulder_left_rest_angle -= range
             self.servo_rear_shoulder_right_rest_angle -= range
             self.servo_front_shoulder_left_rest_angle += range
             self.servo_front_shoulder_right_rest_angle += range
 
-        elif raw_value > 0:
+        # elif raw_value > 0:
+        elif False:
             self.servo_rear_shoulder_left_rest_angle += range
             self.servo_rear_shoulder_right_rest_angle += range
             self.servo_front_shoulder_left_rest_angle -= range
