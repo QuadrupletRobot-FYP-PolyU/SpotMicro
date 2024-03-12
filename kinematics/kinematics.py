@@ -225,7 +225,7 @@ def ikine(x4, y4, z4, l1, l2, l3, legs12=True):
     # Supporting variable D (ORIGINAL CODE)
     D = (x4**2 + y4**2 + z4**2 - l1**2 - l2**2 - l3**2)/(2*l2*l3)
     # Let's hope this is no longer needed
-    # D = np.clip(D, -1.0, 1.0)
+    D = np.clip(D, -1.0, 1.0)
 
     if legs12 == True:
         q3 = atan2(sqrt(1-D**2), D)

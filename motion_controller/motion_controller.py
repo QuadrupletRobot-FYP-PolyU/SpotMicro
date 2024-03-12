@@ -667,19 +667,6 @@ class MotionController:
             self.servo_rear_feet_right.angle = 180 - theta2
 
     def walk_forward(self, steps, distance, body_length, body_width, l1, l2, l3):
-        '''
-        Moves the robot forward by a specified number of steps and distance.
-
-        Args:
-            robot: The quadruped robot object (assumed to have methods to move joints).
-            steps: Number of steps to take.
-            distance: Distance to move forward in each step.
-            body_length: Length of the robot's body.
-            body_width: Width of the robot's body.
-            l1: Length of the first link of the legs.
-            l2: Length of the second link of the legs.
-            l3: Length of the third link of the legs.
-        '''
 
         # Define the height of the step and the leg lifting sequence
         step_height = 0.1
@@ -690,7 +677,7 @@ class MotionController:
                 # Lift the leg
                 x_lift, y_lift, z_lift = 0, 0, step_height
                 theta1, theta2, theta3 = ikine(x_lift, y_lift, z_lift, l1, l2, l3, leg_name in [
-                                               'rightback', 'leftfront'])
+                                               'FrontLeft', 'FrontRight'])
 
                 # Update the leg joint angles to lift the leg
                 self.move_leg(leg_name, theta1, theta2, theta3)
