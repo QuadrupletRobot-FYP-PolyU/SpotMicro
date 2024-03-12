@@ -201,7 +201,7 @@ class MotionController:
 
                 if event['x']:
                     self.body_move_position_left()
-
+                self.move()
             except queue.Empty as e:
                 log.info('Inactivity lasted 60 seconds, shutting down the servos, '
                          'press start to reactivate')
