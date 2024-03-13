@@ -681,6 +681,9 @@ class MotionController:
             variation_feet + 5
 
     def move_leg(self, leg, theta0, theta1, theta2):
+
+        print(
+            f"leg name:{leg}, theta0: {theta0}, theta1: {theta1}, theta2: {theta2}")
         if leg == "FrontLeft":
             self.servo_front_shoulder_left.angle = theta0
             self.servo_front_leg_left.angle = theta1
