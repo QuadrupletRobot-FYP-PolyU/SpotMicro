@@ -227,7 +227,7 @@ class MotionController:
                 # Move the leg forward
                 x_forward, y_forward, z_forward = distance, 0, step_height
                 theta1, theta2, theta3 = ikine(
-                    x_forward, y_forward, z_forward, l1, l2, l3, leg_name in ['rightback', 'leftfront'])
+                    x_forward, y_forward, z_forward, l1, l2, l3, leg_name in ['FrontLeft', 'FrontRight'])
 
                 # Update the leg joint angles to position the leg forward
                 self.move_leg(leg_name, theta1, theta2, theta3)
@@ -235,7 +235,7 @@ class MotionController:
                 # Lower the leg
                 x_down, y_down, z_down = distance, 0, 0
                 theta1, theta2, theta3 = ikine(x_down, y_down, z_down, l1, l2, l3, leg_name in [
-                                               'rightback', 'leftfront'])
+                                               'FrontLeft', 'FrontRight'])
 
                 # Update the leg joint angles to lower the leg
                 self.move_leg(leg_name, theta1, theta2, theta3)
@@ -686,14 +686,14 @@ class MotionController:
             self.servo_front_leg_left.angle = theta1
             self.servo_front_feet_left.angle = theta2
         elif leg == "FrontRight":
-            self.servo_front_shoulder_right.angle = 180 - theta0
-            self.servo_front_leg_right.angle = 180 - theta1
-            self.servo_front_feet_right.angle = 180 - theta2
+            self.servo_front_shoulder_right.angle = theta0
+            self.servo_front_leg_right.angle = theta1
+            self.servo_front_feet_right.angle = theta2
         elif leg == "RearLeft":
             self.servo_rear_shoulder_left.angle = theta0
             self.servo_rear_leg_left.angle = theta1
             self.servo_rear_feet_left.angle = theta2
         elif leg == "RearRight":
-            self.servo_rear_shoulder_right.angle = 180 - theta0
-            self.servo_rear_leg_right.angle = 180 - theta1
-            self.servo_rear_feet_right.angle = 180 - theta2
+            self.servo_rear_shoulder_right.angle = theta0
+            self.servo_rear_leg_right.angle = theta1
+            self.servo_rear_feet_right.angle = theta2
