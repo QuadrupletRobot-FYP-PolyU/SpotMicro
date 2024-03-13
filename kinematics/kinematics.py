@@ -222,23 +222,21 @@ def ikine(x4, y4, z4, l1, l2, l3, legs12=True):
         A length 3 tuple of leg angles in the order (q1,q2,q3)
     '''
 
-    # Supporting variable D (ORIGINAL CODE)
-    D = (x4**2 + y4**2 + z4**2 - l1**2 - l2**2 - l3**2)/(2*l2*l3)
-    # Let's hope this is no longer needed
-    D = np.clip(D, -1.0, 1.0)
+    # Supporting variable D (UPDATED CODE)
+    D = (x4**2 + y4**2 + z4**2 - l1**2 - l2**2 - l3**2) / (2 * l2 * l3)
+    D = np.clip(D, -1.0, 1.0)  # Clamping D to avoid invalid values for sqrt
 
-    if legs12 == True:
-        q3 = atan2(sqrt(1-D**2), D)
+    # Calculate q3 based on D (UPDATED CODE)
+    if legs12:
+        q3 = atan2(sqrt(1 - D**2), D)
     else:
-        q3 = atan2(-sqrt(1-D**2), D)
+        q3 = atan2(-sqrt(1 - D**2), D)
 
+    # Calculate q2 based on q3 (UPDATED CODE)
     q2 = atan2(z4, sqrt(x4**2 + y4**2 - l1**2)) - \
-        atan2(l3*sin(q3), l2 + l3*cos(q3))
+        atan2(l3 * sin(q3), l2 + l3 * cos(q3))
 
-    # After using the equations, there seem to be two errors:
-    #   1. The first y4 should not have a negative sign
-    #   2. The entire equation should be multiplied by -1
-    # The equation for q1 below reflects these changes
+    # Calculate q1 with corrections (UPDATED CODE)
+    # The corrected q1 calculation accounts for the comments made about previous errors
     q1 = atan2(y4, x4) + atan2(sqrt(x4**2 + y4**2 - l1**2), -l1)
-
     return (q1, q2, q3)
