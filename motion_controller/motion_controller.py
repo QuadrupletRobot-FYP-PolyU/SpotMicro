@@ -12,7 +12,7 @@ from utilities.log import Logger
 from utilities.config import Config
 import utilities.queues as queues
 from kinematics.kinematics import ikine
-
+import math
 
 log = Logger().setup_logger('Motion controller')
 
@@ -681,22 +681,24 @@ class MotionController:
             variation_feet + 5
 
     def move_leg(self, leg, theta0, theta1, theta2):
-
+        theta0_degrees = math.degrees(theta0)
+        theta1_degrees = math.degrees(theta1)
+        theta2_degrees = math.degrees(theta2)
         print(
-            f"leg name:{leg}, theta0: {theta0}, theta1: {theta1}, theta2: {theta2}")
-        if leg == "FrontLeft":
-            self.servo_front_shoulder_left.angle = theta0
-            self.servo_front_leg_left.angle = theta1
-            self.servo_front_feet_left.angle = theta2
-        elif leg == "FrontRight":
-            self.servo_front_shoulder_right.angle = theta0
-            self.servo_front_leg_right.angle = theta1
-            self.servo_front_feet_right.angle = theta2
-        elif leg == "RearLeft":
-            self.servo_rear_shoulder_left.angle = theta0
-            self.servo_rear_leg_left.angle = theta1
-            self.servo_rear_feet_left.angle = theta2
-        elif leg == "RearRight":
-            self.servo_rear_shoulder_right.angle = theta0
-            self.servo_rear_leg_right.angle = theta1
-            self.servo_rear_feet_right.angle = theta2
+            f"leg name:{leg}, theta0: {theta0_degrees}, theta1: {theta1_degrees}, theta2: {theta2_degrees}")
+        # if leg == "FrontLeft":
+        #    self.servo_front_shoulder_left.angle = theta0
+        #    self.servo_front_leg_left.angle = theta1
+        #    self.servo_front_feet_left.angle = theta2
+        # elif leg == "FrontRight":
+        #    self.servo_front_shoulder_right.angle = theta0
+        #    self.servo_front_leg_right.angle = theta1
+        #    self.servo_front_feet_right.angle = theta2
+        # elif leg == "RearLeft":
+        #    self.servo_rear_shoulder_left.angle = theta0
+        #    self.servo_rear_leg_left.angle = theta1
+        #    self.servo_rear_feet_left.angle = theta2
+        # elif leg == "RearRight":
+        #    self.servo_rear_shoulder_right.angle = theta0
+        #    self.servo_rear_leg_right.angle = theta1
+        #    self.servo_rear_feet_right.angle = theta2
