@@ -217,7 +217,7 @@ class MotionController:
         for _ in range(steps):
             for leg_name in sequence:
                 # Lift the leg
-                x_lift, y_lift, z_lift = 0, 0, step_height
+                x_lift, y_lift, z_lift = l1, 0, step_height
                 theta1, theta2, theta3 = ikine(x_lift, y_lift, z_lift, l1, l2, l3, leg_name in [
                                                'FrontLeft', 'FrontRight'])
 
